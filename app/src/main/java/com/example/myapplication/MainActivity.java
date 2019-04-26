@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -24,10 +25,12 @@ public class MainActivity extends AppCompatActivity {
         tv1=findViewById(R.id.textView1);
 
 
+
         but1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 sum=0;
+                et1.getText().clear();
                 tv1.setText("");
 
             }
@@ -36,9 +39,17 @@ public class MainActivity extends AppCompatActivity {
         but2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-             double num=Long.parseLong(et1.getText().toString())*0.9;
-             sum=sum+(long)num;
-             tv1.setText("Amount= ₹"+String.valueOf(sum));
+                if (et1.length()==0)
+                {
+
+                    et1.setError("Enter a number");
+                }
+                else {
+                    double num = Long.parseLong(et1.getText().toString()) * 0.9;
+                    sum = sum + (long) num;
+                    tv1.setText("Amount= ₹" + String.valueOf(sum));
+                }
+
                 et1.getText().clear();
             }
 
