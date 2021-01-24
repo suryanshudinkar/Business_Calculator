@@ -1,5 +1,5 @@
 # Revenue_Calculator
-A simple calculator which calcuates the total revenue made by company at a base price of each product of rupee 0.90. </br>
+A simple android calculator that calculates the total revenue made by the company at a base price of each product of rupee 0.90.</br>
 Main features:</br>
 -It has a very simple and cool interface.</br>
 -It can work on very large values for e.g 2.1E16.</br>
